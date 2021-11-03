@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactTable from 'react-table';
-import Button from '@material-ui/core/Button';
 import 'react-table/react-table.css';
+import Grid from "@mui/material/Grid";
 
 
 export default function Carlist() {
@@ -55,7 +55,9 @@ export default function Carlist() {
 
     return (
         <div>
-            <ReactTable sortable={true} filterable={true} data={customers} columns={columns} />
+            <Grid item xs={12}>
+                <ReactTable sortable={true} filterable={true} data={customers} columns={columns} />
+            </Grid>
         </div>
     );
 };

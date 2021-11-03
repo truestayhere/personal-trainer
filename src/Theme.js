@@ -1,25 +1,35 @@
 import { createTheme } from '@mui/material/styles';
 
+// https://material.io/resources/color/#!/?view.left=0&view.right=1&primary.color=eee2dc&secondary.color=123c69&primary.text.color=AC3B61&secondary.text.color=EEE2DC
+
 const theme = createTheme({
     palette: {
         primary: {
-            // light: will be calculated from palette.primary.main,
-            main: '#abc4ff',
-            // dark: will be calculated from palette.primary.main,
-            // contrastText: will be calculated to contrast with palette.primary.main
+            main: "#eee2dc",
+            light: "#ffffff",
+            dark: "#bcb0aa",
+            contrastText: "#ac3b61",
         },
+
         secondary: {
-            light: '#ffe6ab',
-            main: '#faba0a',
-            // dark: will be calculated from palette.secondary.main,
-            contrastText: '#262626',
+            main: "#123c69",
+            light: "#476697",
+            dark: "#00173e",
+            contrastText: "#ffffff",
         },
-        // Used by `getContrastText()` to maximize the contrast between
-        // the background and the text.
-        contrastThreshold: 3,
-        // Used by the functions below to shift a color's luminance by approximately
-        // two indexes within its tonal palette.
-        // E.g., shift from Red 500 to Red 300 or Red 700.
-        tonalOffset: 0.2,
+
+        text: {
+            main: "#000000",
+            v1: "#ac3b61"
+        },
+
+        background: {
+            default: "#f7e7d9",
+        }
     },
-});
+    shape: {
+        borderRadius: 3,
+    }
+})
+
+export default theme;
