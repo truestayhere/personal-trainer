@@ -5,17 +5,17 @@ import { createTheme } from '@mui/material/styles';
 const theme = createTheme({
     palette: {
         primary: {
-            main: "#eee2dc",
-            light: "#ffffff",
-            dark: "#bcb0aa",
-            contrastText: "#ac3b61",
-        },
-
-        secondary: {
             main: "#123c69",
             light: "#476697",
             dark: "#00173e",
             contrastText: "#ffffff",
+        },
+
+        secondary: {
+            main: "#eee2dc",
+            light: "#ffffff",
+            dark: "#bcb0aa",
+            contrastText: "#123c69",
         },
 
         text: {
@@ -24,7 +24,7 @@ const theme = createTheme({
         },
 
         background: {
-            default: "#f7e7d9",
+            default: "#ffffff",
         }
     },
     shape: {

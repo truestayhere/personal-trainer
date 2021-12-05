@@ -11,12 +11,12 @@ export default function Main() {
 
     return (
         <div>
-            <Grid container xs={12} spacing={0}
+            <Grid item container xs={12} spacing={0}
                 justifyContent="center" style={{ minHeight: '100vh' }}>
                 <Router>
                     <div>
-                        <Link to="/customerslist"><Button rounded color="secondary" idleText="Customers list">Customers list</Button></Link>{' '}
-                        <Link to="/trainingslist"><Button rounded color="secondary" idleText="Trainings list">Trainings list</Button></Link>{' '}
+                        <Link to="/customerslist"><Button rounded color="primary" idleText="Customers list">Customers list</Button></Link>{' '}
+                        <Link to="/trainingslist"><Button rounded color="primary" idleText="Trainings list">Trainings list</Button></Link>{' '}
                         <Switch>
                             <Route path="/customerslist" component={Customerslist} />
                             <Route path="/trainingslist" component={Trainingslist} />
@@ -29,4 +29,5 @@ export default function Main() {
             </Grid>
         </div >
     )
+
 }
