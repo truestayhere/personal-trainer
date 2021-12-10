@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from '@mui/material';
 import Grid from "@mui/material/Grid";
 import { Paper } from '@mui/material';
 import { ViewState } from '@devexpress/dx-react-scheduler';
@@ -15,7 +14,6 @@ import {
 } from '@devexpress/dx-react-scheduler-material-ui';
 import moment from 'moment';
 
-const currentDate = '2021-12-10';
 
 
 

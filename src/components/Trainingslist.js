@@ -43,8 +43,8 @@ export default function Trainingslist() {
             .catch(err => console.error(err))
     };
 
-    const deleteTraining = (link) => {
-        setLink(link);
+    const deleteTraining = (id) => {
+        setLink(`https://customerrest.herokuapp.com/api/trainings/${id}`);
         setOpen(true);
     };
 
@@ -105,7 +105,7 @@ export default function Trainingslist() {
             sortable: false,
             filterable: false,
             width: 45,
-            accessor: 'links.0.href',
+            accessor: 'id',
             Cell: row => <Tooltip title="Delete" placement="right"><IconButton size="small" color="warning" onClick={() => deleteTraining(row.value)}><RemoveCircleIcon /></IconButton></Tooltip>
         },
     ];
