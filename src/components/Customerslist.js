@@ -7,7 +7,9 @@ import EditCustomer from './EditCustomer';
 import Button from '@mui/material/Button';
 import Snackbar from '@mui/material/Snackbar';
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
+import DownloadIcon from '@mui/icons-material/Download';
 import { IconButton, Tooltip } from '@mui/material';
+import { CSVLink } from 'react-csv';
 
 
 export default function Carlist() {
@@ -77,6 +79,16 @@ export default function Carlist() {
         </React.Fragment>
     );
 
+    const headers = [
+        { label: 'First Name', key: 'firstname' },
+        { label: 'Last Name', key: 'lastname' },
+        { label: 'Street address', key: 'streetaddress' },
+        { label: 'Postcode', key: 'postcode' },
+        { label: 'City', key: 'city' },
+        { label: 'Email', key: 'email' },
+        { label: 'Phone', key: 'phone' },
+    ];
+
 
     const columns = [
         {
@@ -129,6 +141,7 @@ export default function Carlist() {
         <div>
             <Grid item xs={12}>
                 <AddCustomer saveCustomer={saveCustomer} />
+                <CSVLink data={customers} headers={headers} separator=';'><Tooltip title="Export to csv file" placement="right"><IconButton style={{ marginLeft: 10, marginBottom: 8 }} size="small" color="primary"><DownloadIcon /></IconButton></Tooltip></CSVLink>
                 <ReactTable sortable={true} filterable={true} data={customers} columns={columns} />
                 <Snackbar
                     open={open}

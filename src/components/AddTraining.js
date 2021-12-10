@@ -72,7 +72,7 @@ export default function AddTraining(props) {
     return (
         <div style={{ margin: 1 }}>
             <Button style={{ margin: 10 }} size="small" variant="contained" color="secondary" onClick={handleOpen}>
-                Add
+                Add training
             </Button>
             <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>Add training</DialogTitle>
